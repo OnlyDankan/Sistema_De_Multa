@@ -1,0 +1,14 @@
+/Users/daniel/need for speed/obj/Debug/net10.0/need for speed.GeneratedMSBuildEditorConfig.editorconfig
+/Users/daniel/need for speed/obj/Debug/net10.0/need for speed.AssemblyInfoInputs.cache
+/Users/daniel/need for speed/obj/Debug/net10.0/need for speed.AssemblyInfo.cs
+/Users/daniel/need for speed/obj/Debug/net10.0/need for speed.csproj.CoreCompileInputs.cache
+/Users/daniel/need for speed/bin/Debug/net10.0/need for speed
+/Users/daniel/need for speed/bin/Debug/net10.0/need for speed.deps.json
+/Users/daniel/need for speed/bin/Debug/net10.0/need for speed.runtimeconfig.json
+/Users/daniel/need for speed/bin/Debug/net10.0/need for speed.dll
+/Users/daniel/need for speed/bin/Debug/net10.0/need for speed.pdb
+/Users/daniel/need for speed/obj/Debug/net10.0/need for speed.dll
+/Users/daniel/need for speed/obj/Debug/net10.0/refint/need for speed.dll
+/Users/daniel/need for speed/obj/Debug/net10.0/need for speed.pdb
+/Users/daniel/need for speed/obj/Debug/net10.0/need for speed.genruntimeconfig.cache
+/Users/daniel/need for speed/obj/Debug/net10.0/ref/need for speed.dll
