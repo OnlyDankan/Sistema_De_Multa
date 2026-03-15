@@ -6,32 +6,21 @@ using System.Security.AccessControl;
 int velocidade;
 int excesso_velocidade;
 int valor_multa;
-int ID;
 
 Console.Write("Digite o ID da carteira de motorista: ");
-ID = int.Parse(Console.ReadLine());
+string ID = Console.ReadLine() ?? "";
 
-if (ID == 0) 
+if (ID == null)
 {
-    throw new Exception ("Por favor coloque o ID do motorista");
+    throw new Exception ("Você digitou errado. Tente novamente.");
 }
-bool erro = false;
-try
+  int IDNum = Convert.ToInt32(ID);
+
+  if (IDNum <= 0)
 {
-    if (ID < 0)
-    {
-        throw new Exception ("O ID do motorista não pode ser negativo");
-    }
+    throw new Exception ("Você digitou errado. Tente novamente.");
 }
-catch (Exception ex)
-{
-    Console.WriteLine($"Erro: {ex.Message}");
-    erro = true;
-}
-if (erro)
-{
-    return;
-}   
+
 
 Console.Write("Digite o valor da velocidade: ");
 velocidade = int.Parse(Console.ReadLine() ?? "");
