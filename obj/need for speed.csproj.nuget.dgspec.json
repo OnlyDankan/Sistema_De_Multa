@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/daniel/need for speed/need for speed.csproj": {}
+    "/Users/daniel/Documents/GitHub/Sistema_De_Multa/need for speed.csproj": {}
   },
   "projects": {
-    "/Users/daniel/need for speed/need for speed.csproj": {
+    "/Users/daniel/Documents/GitHub/Sistema_De_Multa/need for speed.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/daniel/need for speed/need for speed.csproj",
+        "projectUniqueName": "/Users/daniel/Documents/GitHub/Sistema_De_Multa/need for speed.csproj",
         "projectName": "need for speed",
-        "projectPath": "/Users/daniel/need for speed/need for speed.csproj",
+        "projectPath": "/Users/daniel/Documents/GitHub/Sistema_De_Multa/need for speed.csproj",
         "packagesPath": "/Users/daniel/.nuget/packages/",
-        "outputPath": "/Users/daniel/need for speed/obj/",
+        "outputPath": "/Users/daniel/Documents/GitHub/Sistema_De_Multa/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/daniel/.nuget/NuGet/NuGet.Config"
