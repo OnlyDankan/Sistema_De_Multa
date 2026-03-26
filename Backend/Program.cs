@@ -57,4 +57,9 @@ if (velocidade <= 60)
     }
 } 
 
+Console.WriteLine("Resumo:");
+Console.WriteLine($"Nome do motorista: {nome}");
+Console.WriteLine($"ID do motorista: {ID}");
+Console.WriteLine($"Velocidade do motorista: {velocidade}");
+
 
