@@ -7,7 +7,7 @@ int velocidade;
 int excesso_velocidade;
 int valor_multa;
 
-Console.WriteLine("Digite o nome do motorista");
+Console.Write("Digite o nome do motorista: ");
 string nome = Console.ReadLine() ?? "";
 
 if (nome == null)
