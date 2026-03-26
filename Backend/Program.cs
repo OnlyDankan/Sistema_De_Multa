@@ -55,11 +55,13 @@ if (velocidade <= 60)
     {
         Console.WriteLine("A carteira foi automáticamente desativada no sistema");
     }
-} 
 
 Console.WriteLine("Resumo:");
 Console.WriteLine($"Nome do motorista: {nome}");
 Console.WriteLine($"ID do motorista: {ID}");
 Console.WriteLine($"Velocidade do motorista: {velocidade}");
+Console.WriteLine($"Valor da multa aplicada: R${valor_multa}");
+} 
+
 
 
