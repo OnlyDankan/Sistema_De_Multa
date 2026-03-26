@@ -42,15 +42,18 @@ if (velocidade <= 60)
     valor_multa = 7 * excesso_velocidade;
     Console.WriteLine($"O valor da multa: R${valor_multa}");
 
-    if (valor_multa >= 30) 
+    if (valor_multa <= 30) 
     {
         Console.WriteLine("20 Pontos foram adicionados na carteira do motorista.");
-    } else if (valor_multa >= 80)
+    } else if (valor_multa <= 80)
     {
         Console.WriteLine("40 Pontos foram adicionados na carteira do motorista");
-    } else if (valor_multa >= 150)
+    } else if (valor_multa <= 150)
     {
         Console.WriteLine("80 Pontos foram adicionados na carteira do motorista");
+    } else if (valor_multa > 150)
+    {
+        Console.WriteLine("A carteira foi automáticamente desativada no sistema");
     }
 } 
 
