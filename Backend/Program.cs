@@ -35,7 +35,7 @@ velocidade = int.Parse(Console.ReadLine() ?? "");
 
 if (velocidade <= 60)
 {
-    Console.WriteLine("Ok. Sem problemas");
+    Console.WriteLine("Velocidade normal");
 } else if (velocidade > 60)  
 {
     excesso_velocidade = velocidade - 60;
