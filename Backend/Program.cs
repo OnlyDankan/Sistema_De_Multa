@@ -7,6 +7,14 @@ int velocidade;
 int excesso_velocidade;
 int valor_multa;
 
+Console.WriteLine("Digite o nome do motorista");
+string nome = Console.ReadLine() ?? "";
+
+if (nome == null)
+{
+    throw new Exception ("Você digitou errado. Tente novamente");
+}
+
 Console.Write("Digite o ID da carteira de motorista: ");
 string ID = Console.ReadLine() ?? "";
 
