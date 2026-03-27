@@ -6,6 +6,7 @@ using System.Security.AccessControl;
 int velocidade;
 int excesso_velocidade;
 int valor_multa;
+string resumo = "";
 
 Console.Write("Digite o nome do motorista: ");
 string nome = (Console.ReadLine() ?? "") ?? throw new Exception("Você digitou errado. Tente novamente");
@@ -33,6 +34,8 @@ if (velocidade <= 60)
     Console.WriteLine("Velocidade normal");
 } else if (velocidade > 60)  
 {
+    resumo = "--- RESUMO: ---\n";
+    resumo += 
     excesso_velocidade = velocidade - 60;
     valor_multa = 7 * excesso_velocidade;
     Console.WriteLine($"O valor da multa: R${valor_multa}");
