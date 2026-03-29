@@ -34,32 +34,31 @@ if (velocidade <= 60)
     Console.WriteLine("Velocidade normal");
 } else if (velocidade > 60)  
 {
-    resumo = "--- RESUMO: ---\n";
-    resumo += 
     excesso_velocidade = velocidade - 60;
     valor_multa = 7 * excesso_velocidade;
-    Console.WriteLine($"O valor da multa: R${valor_multa}");
+
+    resumo = "--- RESUMO: ---\n";
+    resumo += $"Motorista: {nome}\n";
+    resumo += $"ID: {IDNum}\n";
+    resumo += $"Velocidade registrada: {velocidade} KM/H\n";
+    resumo += $"Valor da multa: {valor_multa}\n";
 
     if (valor_multa <= 30) 
     {
-        Console.WriteLine("20 Pontos foram adicionados na carteira do motorista.");
+        resumo += "20 pontos adicionados\n";
     } else if (valor_multa <= 80)
     {
-        Console.WriteLine("40 Pontos foram adicionados na carteira do motorista");
+        resumo += "40 pontos foram adicionados \n";
     } else if (valor_multa <= 150)
     {
-        Console.WriteLine("80 Pontos foram adicionados na carteira do motorista");
+        resumo += "80 pontos foram adicionados\n";
     } else if (valor_multa > 150)
     {
-        Console.WriteLine("A carteira foi automáticamente desativada no sistema");
+        resumo += "A carteira foi suspensa no sistema";
     }
 
-Console.WriteLine("Resumo:");
-Console.WriteLine($"Nome do motorista: {nome}");
-Console.WriteLine($"ID do motorista: {ID}");
-Console.WriteLine($"Velocidade do motorista: KM/H: {velocidade}");
-Console.WriteLine($"Valor da multa aplicada: R${valor_multa}");
-} 
+    Console.WriteLine(resumo);
+    } 
 
 
 
