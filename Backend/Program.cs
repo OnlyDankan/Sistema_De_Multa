@@ -41,7 +41,7 @@ if (velocidade <= 60)
     resumo += $"Motorista: {nome}\n";
     resumo += $"ID: {IDNum}\n";
     resumo += $"Velocidade registrada: {velocidade} KM/H\n";
-    resumo += $"Valor da multa: {valor_multa}\n";
+    resumo += $"Valor da multa: R${valor_multa}\n";
 
     if (valor_multa <= 30) 
     {
