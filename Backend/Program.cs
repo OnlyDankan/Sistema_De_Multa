@@ -12,13 +12,9 @@ Console.Write("Digite o nome do motorista: ");
 string nome = (Console.ReadLine() ?? "") ?? throw new Exception("Você digitou errado. Tente novamente");
 
 Console.Write("Digite o ID da carteira de motorista: ");
-string ID = Console.ReadLine() ?? "";
+string ID = (Console.ReadLine() ?? "") ?? throw new Exception("Você digitou errado. Tente novamente.");
 
-if (ID == null)
-{
-    throw new Exception ("Você digitou errado. Tente novamente.");
-}
-  int IDNum = Convert.ToInt32(ID);
+int IDNum = Convert.ToInt32(ID);
 
   if (IDNum <= 0)
 {
