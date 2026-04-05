@@ -6,20 +6,44 @@ using System.Security.AccessControl;
 int velocidade;
 int excesso_velocidade;
 int valor_multa;
+string nome;
 string resumo = "";
 
-Console.Write("Digite o nome do motorista: ");
-string nome = (Console.ReadLine() ?? "") ?? throw new Exception("Você digitou errado. Tente novamente");
+do
+{
+    Console.Write("Digite o nome do motorista: ");
+    nome = (Console.ReadLine() ?? "");
+
+    if (string.IsNullOrWhiteSpace(nome))
+    {
+        Console.WriteLine("O campo é obrigatório. Tente Novamente.");
+    }
+} while (string.IsNullOrWhiteSpace(nome));
+
+
 
 Console.Write("Digite o ID da carteira de motorista: ");
-string ID = (Console.ReadLine() ?? "") ?? throw new Exception("Você digitou errado. Tente novamente.");
+string ID = (Console.ReadLine() ?? "");
 
-int IDNum = Convert.ToInt32(ID);
-
-  if (IDNum <= 0)
+if (string.IsNullOrWhiteSpace(ID))
 {
-    throw new Exception ("ID inválido. Tente novamente.");
+    Console.WriteLine("Digite um número válido");
 }
+
+try
+{
+    int IDNum = int.Parse(ID);
+
+    return IDNum;
+} 
+catch
+{
+    Console.WriteLine("Digite um número válido. Tente novamente.");
+} while (string.IsNullOrWhiteSpace(ID))
+
+// int IDNum = Convert.ToInt32(ID); (estudar depois)
+
+ 
 
 
 Console.Write("Digite o valor da velocidade: ");
