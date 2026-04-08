@@ -22,7 +22,7 @@ do
 
  int IDNum = 0; 
 
- bool valido = false;
+bool valido = false;
 do 
 { 
 Console.Write("Digite o ID da carteira de motorista: ");
