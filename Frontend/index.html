@@ -1,22 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de multa</title>
-    <!-- Futuro CSS -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DETRAN — Sistema de Registro de Infrações</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Futuro titulo principal</h1>
-    </header>
-    
-    <main>
-        <p>Conteúdo do C#.</p>
-    </main>
-    
-    <footer>
-        <p>&copy; 2026</p>
-    </footer>
+
+<header>
+  <div class="header-top">
+    <div class="brasao">🛡️</div>
+    <div class="header-text">
+      <h1>DETRAN — Departamento Estadual de Trânsito</h1>
+      <p>Sistema Integrado de Gestão de Infrações de Trânsito — SIGIT v3.2</p>
+    </div>
+    <div class="header-badge">
+      <span>Agente ativo</span>
+      <strong id="relogio">--:--:--</strong>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <a href="#" class="active">📋 Registrar Infração</a>
+    <a href="#">📁 Consultar Histórico</a>
+    <a href="#">🔍 Buscar Motorista</a>
+    <a href="#">📊 Relatórios</a>
+  </nav>
+</header>
+
+<main>
+  <div class="page-title">
+    <div class="page-title-icon">🚦</div>
+    <div>
+      <h2>Registro de Infração por Excesso de Velocidade</h2>
+      <p>Preencha os dados do motorista e da infração registrada pelo agente de fiscalização.</p>
+    </div>
+  </div>
+
+  <!-- FORMULÁRIO -->
+  <div class="card" id="formulario-card">
+    <div class="card-header">
+      <span class="card-header-icon">📝</span>
+      <h3>Dados da Autuação</h3>
+      <span class="step-badge">Nova Infração</span>
+    </div>
+    <div class="card-body">
+      <div class="form-grid">
+
+        <div class="field full">
+          <label>Nome completo do motorista <span class="req">*</span></label>
+          <input type="text" id="nome" placeholder="Ex: João da Silva Santos" autocomplete="off">
+          <span class="error-msg">Informe o nome do motorista.</span>
+        </div>
+
+        <div class="field">
+          <label>ID da Carteira de Motorista (CNH) <span class="req">*</span></label>
+          <input type="number" id="idCNH" placeholder="Ex: 12345678" min="1">
+          <span class="error-msg">ID inválido. Informe um número maior que 0.</span>
+        </div>
+
+        <div class="field">
+          <label>Velocidade registrada <span class="req">*</span></label>
+          <div class="input-with-unit">
+            <input type="number" id="velocidade" placeholder="Ex: 95" min="0" max="300" oninput="atualizarBarra()">
+            <span class="input-unit">KM/H</span>
+          </div>
+          <span class="error-msg">Informe a velocidade medida.</span>
+          <div class="speed-display" id="speedDisplay">
+            <div class="speed-bar-wrap">
+              <div class="speed-bar" id="speedBar"></div>
+            </div>
+            <div class="speed-label">
+              <span>0 km/h</span>
+              <span class="limite">Limite: 60 km/h</span>
+              <span>300 km/h</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="btn-registrar" onclick="processar()">
+        <span>⚡</span> Processar Autuação
+      </button>
+    </div>
+  </div>
+
+  <!-- RESULTADO -->
+  <div id="resultado">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-header-icon">📄</span>
+        <h3>Auto de Infração — Resultado do Processamento</h3>
+        <span class="step-badge" id="badge-resultado">Gerado</span>
+      </div>
+      <div class="card-body">
+
+        <div class="protocolo-bar">
+          <span>Nº Protocolo</span>
+          <strong id="protocolo">---</strong>
+        </div>
+
+        <div id="status-banner"></div>
+
+        <div class="resumo-grid" id="resumo-grid" style="display:none">
+          <div class="resumo-item">
+            <div class="ri-label">Motorista</div>
+            <div class="ri-value" id="r-nome">—</div>
+          </div>
+          <div class="resumo-item">
+            <div class="ri-label">ID / CNH</div>
+            <div class="ri-value" id="r-id">—</div>
+          </div>
+          <div class="resumo-item">
+            <div class="ri-label">Velocidade registrada</div>
+            <div class="ri-value" id="r-vel">—</div>
+          </div>
+          <div class="resumo-item">
+            <div class="ri-label">Excesso</div>
+            <div class="ri-value" id="r-excesso">—</div>
+          </div>
+          <div class="resumo-item destaque" style="grid-column:1/-1">
+            <div class="ri-label">Valor da Multa</div>
+            <div class="ri-value" id="r-multa">—</div>
+          </div>
+        </div>
+
+        <div id="penalidade-box"></div>
+
+        <div class="acoes">
+          <button class="btn-acao btn-imprimir" onclick="window.print()">🖨️ Imprimir Auto</button>
+          <button class="btn-acao btn-nova" onclick="novaAutuacao()">➕ Nova Autuação</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 <strong>DETRAN</strong> — Departamento Estadual de Trânsito. SIGIT v3.2</p>
+  <p>Uso restrito a agentes autorizados. Todas as operações são registradas e auditadas.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
