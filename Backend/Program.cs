@@ -22,24 +22,27 @@ do
 
  int IDNum = 0; 
 
-do { 
+ bool valido = false;
+do 
+{ 
 Console.Write("Digite o ID da carteira de motorista: ");
 string ID = (Console.ReadLine() ?? "");
 
 if (string.IsNullOrWhiteSpace(ID))
 { 
     Console.WriteLine("Digite um número válido");
+    continue;
 } 
 
-try
-{ 
-     IDNum = int.Parse(ID);
-} 
-catch
-{
-    Console.WriteLine("Digite um número válido. Tente novamente.");
-} 
-} while (string.IsNullOrWhiteSpace(IDNum));
+valido = int.TryParse(ID, out IDNum);
+
+if (!valido)
+    {
+        Console.WriteLine("Digite um número válido. Temte novamente");
+    }
+} while (!valido);    
+
+ //while (string.IsNullOrWhiteSpace(ID));
 // int IDNum = Convert.ToInt32(ID); (estudar depois)
 
  
