@@ -7,7 +7,7 @@ function atualizarRelogio() {
 setInterval(atualizarRelogio, 1000);
 atualizarRelogio();
 
-// Barra visual de velocidade
+
 function atualizarBarra() {
   const vel = parseInt(document.getElementById('velocidade').value) || 0;
   const display = document.getElementById('speedDisplay');
@@ -26,14 +26,14 @@ function atualizarBarra() {
   }
 }
 
-// Gerar número de protocolo aleatório
+
 function gerarProtocolo() {
   const ano = new Date().getFullYear();
   const num = Math.floor(Math.random() * 9000000 + 1000000);
   return `INF-${ano}-${num}`;
 }
 
-// Validação dos campos
+
 function validar(nome, idCNH, velocidade) {
   let ok = true;
 
@@ -49,7 +49,7 @@ function validar(nome, idCNH, velocidade) {
   return ok;
 }
 
-// Processar autuação (mesma lógica do C#)
+
 async function processar() {
   const nome       = document.getElementById('nome').value.trim();
   const idCNH      = parseInt(document.getElementById('idCNH').value);

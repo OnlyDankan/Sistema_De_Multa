@@ -23,7 +23,6 @@ body {
   min-height: 100vh;
 }
 
-/* HEADER */
 header {
   background: var(--azul-gov);
   border-bottom: 4px solid var(--amarelo);
@@ -93,7 +92,6 @@ header {
   border-bottom-color: var(--amarelo);
 }
 
-/* MAIN */
 main { max-width: 960px; margin: 36px auto; padding: 0 24px; }
 
 .page-title {
@@ -115,7 +113,7 @@ main { max-width: 960px; margin: 36px auto; padding: 0 24px; }
 
 .page-title p { font-size: 13px; color: var(--cinza-texto); margin-top: 2px; }
 
-/* CARD */
+
 .card {
   background: var(--branco); border-radius: 12px;
   box-shadow: var(--sombra-card); border: 1px solid var(--cinza-borda);
@@ -144,7 +142,7 @@ main { max-width: 960px; margin: 36px auto; padding: 0 24px; }
 
 .card-body { padding: 28px 24px; }
 
-/* FORM */
+
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; }
 .form-grid .full { grid-column: 1 / -1; }
 
@@ -206,7 +204,7 @@ main { max-width: 960px; margin: 36px auto; padding: 0 24px; }
 
 .speed-label span.limite { color: var(--azul-medio); }
 
-/* BOTÃO */
+
 .btn-registrar {
   display: flex; align-items: center; justify-content: center; gap: 10px;
   width: 100%; padding: 15px;
@@ -223,7 +221,7 @@ main { max-width: 960px; margin: 36px auto; padding: 0 24px; }
 .btn-registrar:hover { background: #0d4ab0; }
 .btn-registrar:active { transform: scale(0.99); }
 
-/* RESULTADO */
+
 #resultado { display: none; animation: fadeUp 0.4s ease; }
 
 @keyframes fadeUp {
@@ -315,7 +313,7 @@ main { max-width: 960px; margin: 36px auto; padding: 0 24px; }
 .btn-nova { background: var(--azul-gov); border-color: var(--azul-gov); color: var(--branco); }
 .btn-nova:hover { background: #0d2a5a; }
 
-/* FOOTER */
+
 footer {
   background: var(--azul-gov); border-top: 3px solid var(--amarelo);
   padding: 18px 40px; margin-top: 48px;
@@ -325,7 +323,7 @@ footer {
 footer p { color: #5b7aa7; font-size: 12px; }
 footer strong { color: var(--amarelo); }
 
-/* RESPONSIVO */
+/* Responsividade */
 @media (max-width: 640px) {
   .form-grid { grid-template-columns: 1fr; }
   .form-grid .full { grid-column: 1; }
