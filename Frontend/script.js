@@ -117,7 +117,7 @@ async function processar() {
           </div>
         </div>`;
 
-    } else if (valorMulta <= 80) {
+    } else if (valorMulta <= 50) {
       bannerHTML = `
         <div class="status-banner multa">
           <div class="status-banner-icon">🚨</div>
@@ -135,7 +135,7 @@ async function processar() {
           </div>
         </div>`;
 
-    } else if (valorMulta <= 150) {
+    } else if (valorMulta <= 100) {
       bannerHTML = `
         <div class="status-banner multa">
           <div class="status-banner-icon">🔴</div>
@@ -194,7 +194,7 @@ function novaAutuacao() {
 
   ['nome', 'idCNH', 'velocidade'].forEach(id => {
     document.getElementById(id).closest('.field').classList.remove('has-error');
-  });
+  }); 
 
   document.getElementById('formulario-card').scrollIntoView({ behavior: 'smooth' });
   document.getElementById('nome').focus();
