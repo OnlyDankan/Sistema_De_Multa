@@ -20,7 +20,7 @@ do
     }
 } while (string.IsNullOrWhiteSpace(nome));
 
- int IDNum = 0; 
+int IDNum = 0; 
 
 bool valido = false;
 do 
@@ -44,9 +44,6 @@ if (!valido)
 
  //while (string.IsNullOrWhiteSpace(ID));
 // int IDNum = Convert.ToInt32(ID); (estudar depois)
-
- 
-
 
 Console.Write("Digite o valor da velocidade: ");
 velocidade = int.Parse(Console.ReadLine() ?? "");
