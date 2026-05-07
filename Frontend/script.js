@@ -93,13 +93,13 @@ async function processar() {
     resumoGrid.style.display = 'grid';
 
     badge.textContent      = 'Autuado';
-    badge.style.background = '#fef2f2';
+    badge.style.background = '#fef2f2'; 
     badge.style.color      = '#991b1b';
 
     let bannerHTML     = '';
     let penalidadeHTML = '';
 
-    if (valorMulta <= 30) {
+    if (valorMulta <= 10) {
       bannerHTML = `
         <div class="status-banner multa">
           <div class="status-banner-icon">⚠️</div>
@@ -117,7 +117,7 @@ async function processar() {
           </div>
         </div>`;
 
-    } else if (valorMulta <= 50) {
+    } else if (valorMulta <= 30) {
       bannerHTML = `
         <div class="status-banner multa">
           <div class="status-banner-icon">🚨</div>
@@ -135,7 +135,7 @@ async function processar() {
           </div>
         </div>`;
 
-    } else if (valorMulta <= 100) {
+    } else if (valorMulta <= 80) {
       bannerHTML = `
         <div class="status-banner multa">
           <div class="status-banner-icon">🔴</div>
