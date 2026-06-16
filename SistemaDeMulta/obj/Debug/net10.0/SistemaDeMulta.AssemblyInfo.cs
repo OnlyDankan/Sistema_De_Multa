@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaDeMulta")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a15563323ac5d40ce49c86225ea2d928d149bf49")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77ea726010e20e03e27999175c2b1c1a279acb8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaDeMulta")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaDeMulta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
